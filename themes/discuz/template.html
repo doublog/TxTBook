@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={CHARSET}">
+<meta name="keywords" content="TxTbook,free guestbook,php,guestbook,script,doublog.com">
+<link rel="stylesheet" href="themes/discuz/style.css" type="text/css">
+<script language="Javascript1.2" type="text/javascript">
+<!--
+var _editor_url = "js/htmlarea{HTMLAREA_EXT}/";
+var win_ie_ver = parseFloat(navigator.appVersion.split("MSIE")[1]);
+if (navigator.userAgent.indexOf('Mac')        >= 0) { win_ie_ver = 0; }
+if (navigator.userAgent.indexOf('Windows CE') >= 0) { win_ie_ver = 0; }
+if (navigator.userAgent.indexOf('Opera')      >= 0) { win_ie_ver = 0; }
+if (win_ie_ver >= 5.5) {
+ document.write('<script src="' +_editor_url+ 'editor.js"');
+ document.write(' language="Javascript1.2" type="text/javascript"></scr' + 'ipt>');  
+} else { 
+ document.write('<scr'+'ipt>function editor_generate() { return false; }</scr'+'ipt>');
+}
+
+var pageAmount = {AVATAR_PAGE_AMOUNT};
+var totalImage = {AVATAR_TOTAL_IMAGE};
+var imagePage = 1;
+var totalPage = parseInt(totalImage / pageAmount) + ((totalImage % pageAmount) != 0 ? 1 : 0);
+function nextImagePage() {
+	imagePage++;
+	if (imagePage > totalPage) {imagePage = 1};
+	imageStart = pageAmount * (imagePage - 1);
+	imageEnd = imageStart + pageAmount;
+	if (imageEnd > (totalImage - 1)) (imageEnd = (totalImage - 1));
+	var i = imageStart;
+	var imageContainer = document.getElementById("ChoiceImage");
+	for (var j = 0; j < imageContainer.childNodes.length; j++) {
+		if (i > imageEnd) {continue; }
+		var obj = imageContainer.childNodes[j];
+		if (obj.type == "radio") {
+			if (i < 10) (i = "0" + i);
+			obj.value = i;
+			continue;
+		} else if (obj.src != undefined && obj.src != "") {
+			obj.src = "avatar/{AVATAR_SET}/{AVATAR_SET}" + i + ".gif";
+			i++;
+		}
+	}
+}
+
+function checkData() {
+	if (document.getElementById("name").value == "" 
+			|| document.getElementById("text").value == ""
+			|| document.getElementById("captcha").value == "") {
+		alert("{REQUIRE_FIELD}");
+		return false;
+	} else if (document.all.text.value.length > {MAX_MESSAGE_LENGTH}) {
+		alert("{MESSAGE_TOO_LONG}");
+		return false;
+	}
+	return true;
+}
+function mouseOver(src){
+	if (!src.contains(event.fromElement)){
+		src.bgColor = '#ffFFFF';
+	}
+}
+function mouseOut(src) {
+	if (!src.contains(event.toElement)){
+		src.bgColor = '#ebebeb';
+	}
+}
+function now() {
+	var now = new Date();
+	var year = now.getFullYear();
+	var month = now.getMonth()+1;
+	var month = (month > 9) ? month : "0" + month;
+	var dat = now.getDate();
+	dat = (dat > 9) ? dat : "0" + dat;
+	return (year + "/" + month + "/" + dat);
+}
+function newCaptcha() {
+	var now=new Date();
+	document.getElementById('image_captcha').src='include/php-captcha.image.php?'+now.getTime();
+}
+-->
+</script>
+<title>{BOOKNAME} (Powered by {APPLICATION_NAME} {VERSION})</title>
+</head>
+
+<body style=" margin-left:0 margin-right:0 margin-top:0">
+
+<table bgcolor="#FFFFFF" width="98%" cellpadding="0" cellspacing="0" border="0" align="center">
+  <tr>
+    <td width="100%" background="themes/discuz/images/topbg.gif">
+
+	  <table border="0" cellspacing="0" cellpadding="0" width="99%" align="center">
+		<tr>
+		  <td rowspan="2" width="8"><img src="themes/discuz/images/spacer.gif" alt="spacer" width="0" height="0"></td>
+		  <td rowspan="2" valign="top"><a href="index.php"><img src="themes/discuz/images/logo.gif" alt="Discuz! Board" border="0"></a></td><td height="80" align="right">&nbsp;
+		  <!-- Position for advertising banner -->
+		  </td>
+		</tr>
+		<tr>
+		  <td align="right" class="smalltxt">
+			<span class="bold">&raquo;&nbsp;</span>
+			<!-- <a href="register.php"></a> -->{SIGNBOOK}| 
+			<!-- <a href="logging.php?action=login"></a>-->{ADM_LOGIN}&nbsp;
+		  </td>
+		  <td rowspan="2" width="8"><img src="themes/discuz/images/spacer.gif" alt="spacer" width="0" height="0"></td>
+		</tr>
+	  </table>
+	</td>
+  </tr>
+</table>
+
+<table bgcolor="#FFFFFF" width="98%" cellpadding="8" cellspacing="0" border="0" align="center">
+  <tr>
+	<td>
+	  <br>
+	  <table cellspacing="1" cellpadding="4" width="99%" align="center">
+		<tr>
+		  <!--td valign="top" nowrap><b><a href="{HOME_URL}">{BOOKNAME} &raquo; </b></td-->
+		  <td valign="top" width="99%">{ANNOUNCEMENT}</td>
+	  </table>
+	</td>
+  </tr>
+</table>
+
+<table bgcolor="#FFFFFF" width="98%" cellpadding="8" cellspacing="0" border="0" align="center">
+  <tr>
+	<td>
+	  <table cellspacing="0" cellpadding="0" width="99%" align="center">
+	    <tr><td>{NAVIGATOR}</td></tr>
+	    <tr><td height="5"></td></tr>
+	    
+	    <!--<tr><td>
+	    <table cellspacing="1" cellpadding="0" class="tableborder">
+	    	<tr bgcolor="#F8F8F8" class="smalltxt">
+	    	<td class="header">&nbsp;13/602&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=1"><b>|</b>&lt;&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=12">&lt;</a>&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=11">11</a>&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=12">12</a>&nbsp;</td>
+	    	<td bgcolor="#FFFFFF">&nbsp;<u><b>13</b></u>&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=14">14</a>&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=15">15</a>&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=16">16</a>&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=17">17</a>&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=18">18</a>&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=19">19</a>&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=20">20</a>&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=14">&gt;</a>&nbsp;</td>
+	    	<td>&nbsp;<a href="forumdisplay.php?fid=23&page=602">&gt;<b>|</b></a>&nbsp;</td>
+	    	<td><input type="text" name="custompage" size="2" style="border: 1px solid #698CC3" onKeyDown="javascript: if(window.event.keyCode == 13) window.location='forumdisplay.php?fid=23&page='+this.value;"></td>
+	    	</tr>
+	    </table>
+	    
+	    </td></tr> -->
+	    <tr><td height="5"></td></tr>
+	  </table>
+	  
+	  <table cellspacing="1" cellpadding="4" width="99%" align="center" class="tableborder">
+	    <tr><td colspan="2" class="header">{BOOKNAME}</td></tr>
+	    
+	    <!-- <tr><td class="singleborder" colspan="2">&nbsp;</td></tr>
+	    <tr bgcolor="#F8F8F8"><td height="100%" colspan="2">{ANNOUNCEMENT}<br></td></tr> -->
+	    {MESSAGE_BLOCK}
+	  </table>
+	  {SIGN_BLOCK}
+	  {SEARCH_BLOCK}
+	  <br>
+	</td>
+  <tr>
+	<td colspan="2" align="center">
+  	  <table>
+  		<tr>
+  		  <td class="smalltxt" align="center">
+  		    {COPYRIGHT} <a href="https://www.doublog.com/" target="_blank" class="smalltxt">Eruo Studio</a><br>
+  		    <a href="http://www.discuz.net/" target=_discuz>This theme is a modification of the Discuz! Board.</a>
+  		  </td>
+  		</tr>
+  	  </table>
+    </td>
+  </tr>
+  
+  <tr>
+    <td style="padding: 1">
+  	   <table cellspacing="0" cellpadding="4" width="100%" class="smalltxt">
+  	     <tr bgcolor="#F8F8F8">
+  	     <td><script type="text/javascript">document.write(new Date());</script></td>
+  		  <td align="right"><a href="https://book.doublog.com/" class="bold">TxtBook</a> - <a href="https://www.doublog.com/" target="_blank" class="bold">www.doublog.com</a></td>
+  	     </tr>
+  	     <tr style="font-size: 0px; line-height: 0px; spacing: 0px; padding: 0px; background-color: #698CC3">
+  	     <td colspan="2">&nbsp;</td>
+  	     </tr>
+  	   </table>
+    </td>
+  </tr>
+</table>
+<br>
+
+<script language="JavaScript1.2" type="text/javascript" defer>
+editor_generate('text');
+</script>
+
+</body>
+</html>

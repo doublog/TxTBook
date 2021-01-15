@@ -1,0 +1,19 @@
+a				{ text-decoration: none; color: #003366 }
+a:hover			{ text-decoration: underline }
+body			{ scrollbar-base-color: #F8F8F8; scrollbar-arrow-color: #698CC3; font-size: 9pt; background-color: #9EB6D8 }
+table,td		{ font-family: Tahoma, Verdana; font-size: 9pt; color: #003366 }
+input,select,textarea	{ font-family: Tahoma, Verdana; font-size: 9pt; color: #003366; font-weight: normal; background-color: #F8F8F8 }
+select			{ font-family: Tahoma, Verdana; font-size: 9pt;  color: #003366; font-weight: normal; background-color: #F8F8F8 }
+.nav			{ font-family: Tahoma, Verdana; font-size: 9pt; font-weight: bold }
+.header			{ font-family: Tahoma, Verdana; font-size: 9pt; color: #FFFFFF; font-weight: bold; background-color: #698CC3 }
+.header a		{ text-decoration: none; color: #FFFFFF }
+.category		{ font-family: Tahoma, Verdana; font-size: 9pt; color: #003366; background-color: #EFEFEF }
+.tableborder	{ background: #D6E0EF; border: 1px solid #698CC3 } 
+.singleborder	{ font-size: 0px; line-height: 1px; padding: 0px; background-color: #F8F8F8 }
+.smalltxt		{ font-family: Tahoma, Verdana; font-size: 9pt }
+.mediumtxt		{ font-family: Tahoma, Verdana; font-size: 9pt; color: #003366 }
+.bold			{ font-weight: bold }
+
+.hand {
+	cursor: pointer;
+}

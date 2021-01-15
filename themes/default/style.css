@@ -1,0 +1,169 @@
+A 		{text-decoration:none}
+A:link		{color:black}
+A:visited	{color:black}
+A:hover		{color:red}
+A:active 	{color:red}
+
+image {	border:0}
+body  {	background-color:lightgrey;
+	background-image:url(images/bg1.gif);
+	margin:10;
+}
+
+.f_tb {	
+	width:600;
+	height:280;
+	background-color:silver;
+	border-width: 1px 1px 1px 1px;
+	border-style: outset outset outset outset;
+	border-color: black black black black;
+	border-collapse: collapse;
+}
+.f_th1{	text-align:center;
+	background-color:gray;
+	font-weight:bold;
+	color:white;
+}
+.f_th2{	text-align:right;
+	background-color:gray;
+	color:gray;
+}
+.f_close {
+	width:10;
+	height:10;
+}
+.gb_title {color:white}
+.m_tb1{ 
+	width:800;
+	height:80;
+	background-color:gray;
+	padding: 5px;
+	border-width: 1px 1px 1px 1px;
+	border-style: outset outset outset outset;
+	border-color: black black black black;
+	border-collapse: collapse;
+}
+.m_tb2{ 
+	width:800;
+	background-color:white;
+	border-width: 1px 1px 1px 1px;
+	border-style: outset outset outset outset;
+	border-color: black black black black;
+	border-collapse: collapse;
+}
+td {	font-size: 10pt; font-family: verdana}
+th {	font-size: 10pt}
+
+.thl {
+	background-color:darkgray; 
+	width: 20%; 
+	font-family: verdana
+}
+.thr {
+	border-width: 1px 1px 1px 1px;
+	border-color: white white white white;
+	border-style: none none none outset;
+	background-color:silver;
+	width: 80%;
+	font-family: verdana
+}
+
+.tdl {
+	border-width: 1px 1px 1px 1px;
+	border-color: white white white white;
+	border-style: outset none none none;
+	background-color:darkgray;
+	width: 20%; 
+	vertical-align:top
+}
+.tdr {
+	border-width: 1px 1px 1px 1px;
+	border-color: white white white white;
+	border-style: outset none none outset;
+	background-color:silver;
+	width: 80%;
+	vertical-align:top
+}
+
+.td_head {	background-color:darkgray; width: 100%; font-family: verdana}
+.td_body {	background-color:silver;   width: 100%; font-family: verdana}
+
+.copyright {
+	width:800;
+	background-color:gray;
+	text-align: center;
+	border-width: 1px 1px 1px 1px;
+	border-style: inset outset outset inset;
+	border-color: black black black black;
+	border-collapse: collapse;
+}
+
+.search {
+	width:800;
+	background-color: white;
+	text-align:center;
+	border-width: 1px 1px 1px 1px;
+	border-style: outset outset outset outset;
+	border-color: black black black black;
+	border-collapse: collapse;
+}
+.fielder {
+	background-color:lightgrey;
+	border-color:silver;
+	border-width:1;
+	font-size:10pt;
+	font-family:verdana;
+}
+.submitter {
+	background-color:gray;
+	border-color:silver;
+	border-width:2;
+	color:white;
+	font-size:10pt;
+	font-family:verdana;
+}
+#dek{
+	POSITION:absolute;
+	VISIBILITY:hidden;
+	Z-INDEX:200;
+}
+#floater {
+	position:absolute;
+	z-index:10;
+}
+.tb100 {
+	width:100%;
+}
+.annoucement {
+	width: 98%; border:1px dotted lightgrey; padding: 5px;
+	font-family: verdana;
+}
+
+.sfont {
+	font-size:8pt;
+}
+
+.move {
+	cursor: move;
+}
+
+.hand {
+	cursor: pointer;
+}
+
+.outerborder {
+	border: 1px solid;
+	border-top-color: #808080;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #808080;
+	border-right-color: #FFFFFF;
+}
+.innerborder {
+	border: 1px solid;
+	border-top-color: #FFFFFF;
+	border-bottom-color: #808080;
+	border-left-color: #FFFFFF;
+	border-right-color: #808080;
+	padding: 3px;
+	background-color: #d4d0c8;
+}

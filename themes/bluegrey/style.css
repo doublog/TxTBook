@@ -1,0 +1,132 @@
+A 		{text-decoration:none}
+A:link		{color:blue}
+A:visited	{color:blue}
+A:hover		{color:green}
+A:active 	{color:green}
+
+image {	border:0}
+body  {	background-color:#F0F0F0;
+	margin:10;
+}
+
+.f_tb {	border: solid 1px;
+	border-color: #7F8FAD;
+	width:900px;
+	height:280px;
+	background-color:#DADEEE;
+	
+}
+
+.f_th1{	text-align:center;
+	background-color:grey;
+	font-weight:bold;
+	color:white;
+}
+
+.f_th2{	text-align:right;
+	background-color:grey;
+	color:gray;
+}
+
+.f_close {
+	width:10;
+	height:10;
+}
+.gb_title {color:white}
+.m_tb1{ border: 1px solid;
+	border-color: #7F8FAD;
+	width:900;
+	height:80;
+	background-color:#7F8FAD;
+	padding: 5px;
+}
+
+.m_tb2{	border: solid 1px;
+	border-color: #7F8FAD;
+	border-collapse: collapse;
+	width:900;
+	background-color:#DADEEE;
+	padding: 4px;
+
+}
+
+td {	font-size: 10pt; font-family: verdana;}
+th {	font-size: 10pt; font-family: verdana;}
+.thl {	background-color: #DADEEE; width: 22%; font-family: verdana;}
+.thr {	background-color: #DADEEE;   width: 78%; font-family: verdana;}
+.tdl {	background-color: #DADEEE; width: 22%; vertical-align: top; border: solid 1px; border-color: #7F8FAD;}
+.tdr {	background-color: #DADEEE;   width: 78%; vertical-align: top; border: solid 1px; border-color: #7F8FAD;}
+.tdsr {	background-color: #DADEEE; width: 40%; vertical-align: middle;}
+.tdsl {	background-color: #DADEEE;   width: 60%; vertical-align: middle;}
+.td_head {background-color: #DADEEE; width: 100%; font-family: verdana;}
+.td_body {background-color: #DADEEE; width: 100%; font-family: verdana;}
+
+.copyright {
+	border:1 solid; 
+	border-color: #7F8FAD;
+	width:900;
+	background-color:grey;
+	text-align:center;
+}
+
+.search {
+	border:solid 1px;
+	border-color: #7F8FAD;
+	width:900;
+	background-color: #DADEEE;
+	text-align:center;
+	padding: 2px;
+}
+
+.fielder {
+	background-color:white;
+	border-color:silver;
+	border-width:1;
+	font-size:10pt;
+	font-family:verdana;
+}
+
+.submitter {
+	background-color:grey;
+	border-color: silver;
+	border-width:2;
+	color:white;
+	font-size:10pt;
+	font-family:verdana;
+}
+
+#dek{
+	POSITION: absolute;
+	VISIBILITY: hidden;
+	Z-INDEX: 200;
+}
+
+#floater {
+	position: absolute;
+	left: 200px;
+	top: 120px;
+	visibility:hidden;
+	z-index:10;
+}
+
+.tb100 {
+	width:100%;
+}
+
+.annoucement {
+	width: 95%; 
+	border: 1px dotted;
+	border-color: #DADEEE; 
+	padding: 5px;
+	font-family: verdana;
+}
+
+.sfont {
+	font-size:8pt;
+}
+
+A.head 			{text-decoration:none}
+A.head:link	{color:yellow}
+A.head:visited	{color:yellow}
+A.head:hover	{color:white}
+A.haed:active 	{color:white}

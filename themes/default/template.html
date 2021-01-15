@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={CHARSET}">
+<meta name="keywords" content="TxTbook,free guestbook,php,guestbook,script,doublog.com" >
+<link rel="stylesheet" type="text/css" href="themes/default/style.css">
+<script language="Javascript1.2" type="text/javascript">
+<!--
+var _editor_url = "js/htmlarea{HTMLAREA_EXT}/";
+var win_ie_ver = parseFloat(navigator.appVersion.split("MSIE")[1]);
+if (navigator.userAgent.indexOf('Mac')        >= 0) { win_ie_ver = 0; }
+if (navigator.userAgent.indexOf('Windows CE') >= 0) { win_ie_ver = 0; }
+if (navigator.userAgent.indexOf('Opera')      >= 0) { win_ie_ver = 0; }
+if (win_ie_ver >= 5.5) {
+ document.write('<script src="' +_editor_url+ 'editor.js"');
+ document.write(' language="Javascript1.2" type="text/javascript" ></script>');
+} else { 
+ document.write('<script>function editor_generate() { return false; }</script>');
+}
+
+var pageAmount = {AVATAR_PAGE_AMOUNT};
+var totalImage = {AVATAR_TOTAL_IMAGE};
+var imagePage = 1;
+var totalPage = parseInt(totalImage / pageAmount) + ((totalImage % pageAmount) != 0 ? 1 : 0);
+function nextImagePage() {
+	imagePage++;
+	if (imagePage > totalPage) {imagePage = 1};
+	imageStart = pageAmount * (imagePage - 1);
+	imageEnd = imageStart + pageAmount;
+	if (imageEnd > (totalImage - 1)) (imageEnd = (totalImage - 1));
+	var i = imageStart;
+	var imageContainer = document.getElementById("ChoiceImage");
+	for (var j = 0; j < imageContainer.childNodes.length; j++) {
+		if (i > imageEnd) {continue; }
+		var obj = imageContainer.childNodes[j];
+		if (obj.type == "radio") {
+			if (i < 10) (i = "0" + i);
+			obj.value = i;
+			continue;
+		} else if (obj.src != undefined && obj.src != "") {
+			obj.src = "avatar/{AVATAR_SET}/{AVATAR_SET}" + i + ".gif";
+			i++;
+		}
+	}
+}
+
+function checkData() {
+	if (document.getElementById("name").value == "" 
+			|| document.getElementById("text").value == ""
+			|| document.getElementById("captcha").value == "") {
+		alert("{REQUIRE_FIELD}");
+		return false;
+	} else if (document.all.text.value.length > {MAX_MESSAGE_LENGTH}) {
+		alert("{MESSAGE_TOO_LONG}");
+		return false;
+	}
+	return true;
+}
+function newCaptcha() {
+	var now=new Date();
+	document.getElementById('image_captcha').src='include/php-captcha.image.php?'+now.getTime();
+}
+-->
+</script>
+<title>{BOOKNAME} (Powered by {APPLICATION_NAME} {VERSION})</title>
+</head>
+
+<body>
+<div id="dek"></div>
+<div id='floater' style='display: none; Z-INDEX: 99'>{SIGN_BLOCK}</div>
+<script src="themes/default/TxTBook.js" type="text/javascript"></script>
+
+<div align="center">
+<table class="m_tb1" cellspacing="0" cellpadding="0">
+ <tr>
+  <td width="1%">&nbsp;</td>
+  <td align="center" width="120"><a href="{HOME_URL}"><img src="themes/default/images/small_logo.gif" alt="logo" border="0"></a></td>
+  <td align="center">
+   <h3 class="gb_title">{BOOKNAME}</h3>
+   {SIGNBOOK} | {ADM_LOGIN}<br>
+   {NAVIGATOR}</td>
+ </tr>
+ <tr>
+ 	<td colspan="3" align="center"><div class="annoucement" align="left">{ANNOUNCEMENT}</div></td>
+ </tr>
+</table>
+<font size="-2"><br></font>
+{MESSAGE_BLOCK}
+<font size="-2"><br></font>
+{SEARCH_BLOCK}
+<font size="-2"><br></font>
+
+<table cellspacing="0" cellpadding="0">
+ <tr>
+  <td class="copyright">
+    <table align=center>
+      <tr>
+        <td><a href="https://book.doublog.com/" target=_blank><img src="images/small_logo.gif" alt="logo" border="0" /></a></td>
+        <td>&nbsp;</td>
+        <td class="sfont">{COPYRIGHT}<br><a href="https://www.doublog.com/" target=_blank>Eruo Studio</a></td>
+      </tr>
+    </table>
+  </td>
+ </tr>
+</table>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+editor_generate('text');
+</script>
+
+</body>
+</html>
